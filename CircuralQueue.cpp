@@ -57,7 +57,13 @@ public:
 
         cout << "\nThe number deleted from the queue is: " << queue_array[FRONT] << "\n";
 
-       
+        //cek jika antrian hanya memiliki satu elemen
+        if (FRONT == REAR)
+        {
+            FRONT = -1;
+            REAR = -1;
+        }
+        else
         {
             //jika elemen FRONT berada di posisi terakhir array, maka kembali ke awal array
             if (FRONT == max - 1)
@@ -67,10 +73,6 @@ public:
         }
     }
 
-    void display()
-    {
-        int FRONT_position = FRONT;
-        int REAR_position = REAR;
 
         //cek apakah antrian kosong
         if (FRONT_position == -1)
