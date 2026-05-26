@@ -87,15 +87,17 @@ public:
 
         cout << "\nElements in the circular queue are......\n";
 
-      
+        //jika FRONT <= REAR, iterasi dari FRONT hingga REAR
+        if (FRONT_position <= REAR_position)
         {
-            //jika FRONT <= REAR, iterasi dari FRONT hingga akhir array
-            while (FRONT_position <= max - 1)
+            while (FRONT_position <= REAR_position)
             {
                 cout << queue_array[FRONT_position] << " ";
                 FRONT_position++;
             }
-            FRONT_position = 0;
+        }
+        else
+        {
 
             //iterasi dari awal array hingga REAR
             while (FRONT_position <= REAR_position)
