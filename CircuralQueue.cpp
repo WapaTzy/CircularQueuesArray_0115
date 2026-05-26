@@ -78,18 +78,16 @@ public:
         int FRONT_position = FRONT;
         int REAR_position = REAR;
 
-      
-
-        //jika FRONT <= REAR, iterasi dari FRONT hingga REAR
-        if (FRONT_position <= REAR_position)
+        //cek apakah antrian kosong
+        if (FRONT_position == -1)
         {
-            while (FRONT_position <= REAR_position)
-            {
-                cout << queue_array[FRONT_position] << " ";
-                FRONT_position++;
-            }
+            cout << "\nQueue is empty\n";
+            return;
         }
-        else
+
+        cout << "\nElements in the circular queue are......\n";
+
+      
         {
             //jika FRONT <= REAR, iterasi dari FRONT hingga akhir array
             while (FRONT_position <= max - 1)
