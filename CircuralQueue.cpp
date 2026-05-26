@@ -8,13 +8,14 @@ private:
     int FRONT, REAR;
     int queue_array[max];
 
-
-    void insert()
+public:
+    Queues()
     {
-        int num;
-        cout << "Enter a number: ";
-        cin >> num;
-        cout << endl;
+        FRONT = -1;
+        REAR = -1;
+    }
+
+  
 
         //cek apakah antrian penuh
         if ((FRONT == 0 && REAR == max - 1) || (FRONT == REAR + 1))
