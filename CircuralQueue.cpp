@@ -29,27 +29,14 @@ public:
             return;
         }
 
-      
-        {
-            //jika REAR berada di posisi terakhir array, maka kembali ke awal array
-            if (REAR == max - 1)
-                REAR = 0;
-            else
-                REAR = REAR + 1;
-        }
-        queue_array[REAR] = num;
-    }
-
-    void remove()
-    {
         //cek apakah antrian kosong
         if (FRONT == -1)
         {
-            cout << "\nQueue underflow\n";
-            return;
+            FRONT = 0;
+            REAR = 0;
         }
-
-        cout << "\nThe number deleted from the queue is: " << queue_array[FRONT] << "\n";
+        else
+        {
 
         //cek jika antrian hanya memiliki satu elemen
         if (FRONT == REAR)
